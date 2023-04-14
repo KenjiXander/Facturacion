@@ -1,17 +1,16 @@
 #include <stdio.h>
 
 int main(void) {
-
   char respuesta;
 
   printf("Ingrese al menú que necesite: \n\nFacturar producto (a)\nImprimir factura (b)\nSalir (c)\n\n> ");
   scanf("%c",&respuesta);
 
-  do
+  do{
     switch ( respuesta ){
       case 'a':
         printf("Estas en el menu de Facturar producto\n\n");
-        printf("Elija uno de los siguientes productos: \n\nLlantas - Precio: $150 (a)\nKit Pastillas de freno - Precio: $55 (b)");
+        respuesta ='c';
         break;
       case 'b':
         printf("Estas en el menu de Imprimir factura");
@@ -21,8 +20,7 @@ int main(void) {
         break;
       default:
         printf("Opcion NO valida");
-        printf(respuesta);
     }
-  while (respuesta);
+  }while (respuesta != 'c');
   
 }
